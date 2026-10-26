@@ -14,21 +14,19 @@ These notes become the first part of the related-work section. The study runs LE
 
 ## Q2
 
-**Energy-Efficient Routing Protocols in Wireless Sensor Networks a Comprehensive Survey and Future Directions** (Kumar et al., ITM Web of Conferences 76, 03007, 2025)
+**Energy-Efficient Routing Protocols in Wireless Sensor Networks a Comprehensive Survey and Future Directions** (Kumar V et al., ITM Web of Conferences 76, 03007, 2025)
 
-*Source note: written from the published abstract. The full text was not accessible when this note was written, so the details below should be checked against the full paper.*
+**What it does.** A short conference paper that mixes a survey with a proposal. It reviews energy-efficient routing work (hierarchical, flat, location-based, and game-theory, machine-learning and metaheuristic approaches). It then proposes an AI-driven, security-aware, cross-layer routing framework, using deep learning for traffic prediction and reinforcement learning for path choice. It evaluates the framework in NS-3 and MATLAB with 100 nodes in a 500 m x 500 m area, a 50 m transmission range, 2 J per node and 512-byte packets, against LEACH, PEGASIS and HEED. It also says it validated the framework on a testbed of real sensor nodes.
 
-**What it does.** A survey of energy-efficient routing in WSNs with future directions. It says it differs from earlier surveys by combining real-time implementation, security-aware routing, AI-driven optimization and cross-layer energy management, and by evaluating how routing protocols adapt in dynamic, large-scale and mobile WSNs, with fault tolerance and sustainability. It also looks at 5G, IoT and blockchain-based solutions.
+**What it found.** Its stated problem is that "the majority of existing studies assume theoretical models/simulations, which do not consider real-world deployment scenarios", and that existing methods "typically lack validation with real-time data". Its conclusion is that the proposed framework beats the baselines. In its Table 2, network lifetime is 1200 rounds for LEACH, 1500 for PEGASIS, 1700 for HEED and 2500 for the proposed framework, and packet delivery ratio is 85%, 88%, 91% and 97%. It reports a 35% lifetime improvement.
 
-**What it found.** The abstract states its finding as a diagnosis plus a recommended framework: existing studies are limited, and a practical, future-proof framework for next-generation WSNs is proposed. It gives no result numbers in the abstract.
-
-**How it bears on this study.** Its starting point is the same as ours: "While numerous studies have explored energy-efficient routing protocols, they often rely on theoretical models and simulations, neglecting real-world deployment constraints." Our study answers this at a small scale. Instead of random layouts with perfect links, it moves to the real positions of an actual deployment, and then to link loss measured on that deployment. It stays a simulation, so it addresses deployment constraints only for geometry and delivery probability. It does not address mobility, security or hardware effects, which this survey also raises.
+**How it bears on this study.** Its diagnosis is the same as ours: simulation-only evaluation that ignores deployment constraints. Two details are useful for the related-work section. First, it also compares LEACH, PEGASIS and HEED, and its Table 2 ranks them HEED, then PEGASIS, then LEACH, on a random 100-node layout. That is the kind of ranking we test against a real topology. Second, it claims a real testbed but gives no testbed details (no node count, hardware, layout or measured link behaviour), and the Table 2 numbers come with no repetitions or spread. So it names the gap without closing it. Our study closes a small part of the gap with public measured data: real positions and measured per-pair delivery probabilities, 40 seeds per condition, and paired tests.
 
 ## Q3
 
 **Computational intelligence techniques for energy efficient routing protocols in wireless sensor networks: A critique** (Sri Lakshmi et al., Transactions on Emerging Telecommunications Technologies, 2023)
 
-*Source note: written from the published abstract. The full text was not accessible when this note was written, so the details below should be checked against the full paper.*
+*Source note: the full PDF is behind a paywall and could not be obtained. This note is based on the published abstract only, so the details below should be checked against the full paper if access becomes available.*
 
 **What it does.** A critique based on a systematic literature review of energy-efficient routing for WSNs. It summarizes key challenges and proposed solutions and lists open research questions: integrating diverse topologies, cross-layer routing, multiple mobile sinks, QoS-aware routing for real-time applications, mathematical modelling for protocol evaluation, and "the challenges of testing routing protocols on real hardware".
 
