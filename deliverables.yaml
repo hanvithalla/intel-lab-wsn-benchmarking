@@ -1,4 +1,5 @@
+version: 1
 deliverables:
-  - key: m000-kickoff
+  m000-kickoff:
     files:
-      - milestones/m000-kickoff.md
+      answers: milestones/m000-kickoff.md
