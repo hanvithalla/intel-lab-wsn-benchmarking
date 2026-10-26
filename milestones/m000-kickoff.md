@@ -39,17 +39,15 @@ The 100-node, 100 x 100 m layout is not a level. It is a separate reproduction c
 
 ---
 
-## Q3. Average attempts on a link with p = 0.5, capped at 8
+## Q3
 
-**B: about 2.**
-Expected attempts with a cap of 8 are (1 - 0.5^8) / 0.5 = 0.996 / 0.5 ≈ 1.99.
+B
 
 ---
 
-## Q4. Which change would break the realism ladder?
+## Q4
 
-**A: using the 100-node, 100 x 100 m layout as the random-ideal level.**
-Node count, area and sink position would all change along with the positions, so the first step would change more than geometry and could no longer be blamed on geometry alone. B, C and D each keep or support the one-change-per-step rule (same seeds, same node set at every level, delivery reported beside lifetime).
+A
 
 ---
 
