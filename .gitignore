@@ -1,0 +1,8 @@
+# datasets are never committed
+data/
+
+# python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
