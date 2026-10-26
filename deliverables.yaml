@@ -2,3 +2,9 @@ version: 1
 deliverables:
   m000-kickoff:
     answers: milestones/m000-kickoff.md
+  m100-setup:
+    notebook: setup/check_setup.ipynb
+    log: setup/setup.log
+    downloads: setup/download_check.csv
+    readme: README.md
+    team: team.md
