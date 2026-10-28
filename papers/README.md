@@ -25,3 +25,16 @@ The PDFs for these are not stored here, because most are IEEE-copyrighted. The n
 | Q4 | Lindsey, Raghavendra. PEGASIS: Power-efficient gathering in sensor information systems. IEEE Aerospace Conference 2002. https://doi.org/10.1109/AERO.2002.1035242 | Third-party hosted copy (the IEEE original is paywalled) |
 | Q5 | Behera et al. Residual Energy-Based Cluster-Head Selection in WSNs for IoT Application (R-LEACH). IEEE IoT Journal 2019. https://doi.org/10.1109/JIOT.2019.2897119 | arXiv: https://arxiv.org/abs/1902.01445 |
 | Q6 | El Alami, Najid. ECH: An Enhanced Clustering Hierarchy Approach to Maximize Lifetime of Wireless Sensor Networks. IEEE Access 2019. https://doi.org/10.1109/ACCESS.2019.2933052 | Open access on IEEE Xplore; PDF in this folder: `m300-q6-elalami-2019-ech-ieee-access.pdf` |
+
+# Papers read for m400 (radio realism and lifetime)
+
+The PDFs are not stored here. The notes in `milestones/m400-reading-notes.md` were written from the copies below.
+
+| Q | Paper | Where it was read |
+|---|---|---|
+| Q1 | Handy, Haase, Timmermann. Low energy adaptive clustering hierarchy with deterministic cluster-head selection. IEEE MWCN 2002. https://doi.org/10.1109/MWCN.2002.1045790 | Author-hosted copy: http://www.vs.inf.ethz.ch/publ/se/IEEE_MWCN2002.pdf |
+| Q2 | Kaushik, Jain, Gunjan, Jhamb, Sharma. Performance Analysis of Cluster-Based Routing Protocols under Propagation and Mobility Variants in Wireless Sensor Networks. IEEE IC2SDT 2025. https://doi.org/10.1109/ic2sdt68218.2025.11383761 | Abstract only (full PDF paywalled) |
+| Q3 | Kotz, Newport, Gray, Liu, Yuan, Elliott. Experimental evaluation of wireless simulation assumptions. MSWiM 2004 (Dartmouth TR2004-507). | Authors' copies: https://www.cs.dartmouth.edu/dfk/research/kotz-axioms-tr2/kotz-axioms-tr2.pdf and https://www.comp.nus.edu.sg/~bleong/geographic/related/kotz04experimental.pdf |
+| Q4 | Zhou, He, Krishnamurthy, Stankovic. Impact of radio irregularity on wireless sensor networks. MobiSys 2004. https://doi.org/10.1145/990064.990081 | USENIX proceedings: https://www.usenix.org/publications/library/proceedings/mobisys04/pdf/p125-zhou.pdf |
+| Q5 | Zhao, Govindan. Understanding packet delivery performance in dense wireless sensor networks. SenSys 2003. | UC eScholarship: https://escholarship.org/uc/item/8ct2h4pk |
+| Q6 | Shahid et al. Link-Quality-Based Energy-Efficient Routing Protocol for WSN in IoT. IEEE Trans. Consumer Electronics 2024. https://doi.org/10.1109/TCE.2024.3356195 | Abstract only (full PDF paywalled) |

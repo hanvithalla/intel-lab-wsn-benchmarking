@@ -12,3 +12,7 @@ deliverables:
     notes: milestones/m200-reading-notes.md
   m300-protocol-notes:
     notes: milestones/m300-protocol-notes.md
+  m400-reading-notes:
+    notes: milestones/m400-reading-notes.md
+  m400-design-note:
+    note: milestones/m400-design-note.md
