@@ -26,3 +26,7 @@ deliverables:
     script: data/make_layouts.py
     index: data/layouts/index.csv
     layouts: data/layouts/random52_seed001.json
+  m600-simulator:
+    core: sim/core.py
+    test: tests/test_energy.py
+    log: logs/test_energy.log

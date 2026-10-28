@@ -1,0 +1,44 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.6, pytest-8.3.4, pluggy-1.5.0 -- C:\Users\dell\AppData\Local\Programs\Python\Python312\python.exe
+rootdir: H:\H Space\WORK\RamanIQ\paper-projects\intel-lab-wsn-benchmarking
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.6.0
+collecting ... collected 34 items
+
+tests/test_core.py::test_ideal_mode_is_one_attempt_charged_to_both_ends PASSED [  2%]
+tests/test_core.py::test_sending_to_the_sink_charges_only_the_sender PASSED [  5%]
+tests/test_core.py::test_measured_mode_with_probability_zero_makes_exactly_eight_attempts PASSED [  8%]
+tests/test_core.py::test_measured_mode_with_probability_one_makes_one_attempt PASSED [ 11%]
+tests/test_core.py::test_a_hop_never_makes_more_than_eight_attempts PASSED [ 14%]
+tests/test_core.py::test_a_packet_that_reaches_the_sink_adds_its_payload_to_packets_delivered PASSED [ 17%]
+tests/test_core.py::test_a_dead_node_cannot_send_or_receive PASSED       [ 20%]
+tests/test_core.py::test_a_node_that_cannot_pay_dies_and_energy_never_goes_below_zero PASSED [ 23%]
+tests/test_core.py::test_a_receiver_that_cannot_pay_dies_and_the_attempt_is_lost PASSED [ 26%]
+tests/test_core.py::test_aggregation_is_charged_to_the_cluster_head PASSED [ 29%]
+tests/test_core.py::test_a_node_cannot_send_to_itself PASSED             [ 32%]
+tests/test_core.py::test_a_run_stops_when_every_sensor_is_dead PASSED    [ 35%]
+tests/test_core.py::test_a_run_stops_at_the_round_cap_when_sensors_are_still_alive PASSED [ 38%]
+tests/test_core.py::test_the_round_cap_is_20000_by_default PASSED        [ 41%]
+tests/test_core.py::test_the_round_cap_is_the_stopping_rule_even_when_energy_is_plentiful PASSED [ 44%]
+tests/test_core.py::test_the_log_has_one_row_per_round_with_the_required_columns PASSED [ 47%]
+tests/test_core.py::test_energy_spent_in_the_log_equals_the_energy_that_left_the_batteries PASSED [ 50%]
+tests/test_core.py::test_first_half_and_last_node_dead_rounds_are_recorded_in_order PASSED [ 52%]
+tests/test_core.py::test_lifetime_rounds_are_none_when_nobody_has_died PASSED [ 55%]
+tests/test_core.py::test_same_seed_gives_the_same_run_and_a_different_seed_a_different_one PASSED [ 58%]
+tests/test_core.py::test_protocol_random_choices_do_not_change_the_link_outcomes PASSED [ 61%]
+tests/test_core.py::test_runs_are_saved_as_one_csv_and_one_json PASSED   [ 64%]
+tests/test_core.py::test_the_intel_network_has_52_sensors_the_sink_and_the_right_probabilities PASSED [ 67%]
+tests/test_core.py::test_no_distance_in_the_intel_lab_reaches_the_crossover PASSED [ 70%]
+tests/test_core.py::test_a_random_layout_loads_with_the_intel_box_and_sink PASSED [ 73%]
+tests/test_energy.py::test_one_4000_bit_packet_over_20_m_costs_the_first_order_amount PASSED [ 76%]
+tests/test_energy.py::test_receiving_a_4000_bit_packet_costs_only_the_electronics PASSED [ 79%]
+tests/test_energy.py::test_constants_match_the_first_order_model PASSED  [ 82%]
+tests/test_energy.py::test_free_space_term_below_the_crossover_and_multipath_above_it PASSED [ 85%]
+tests/test_energy.py::test_cost_is_continuous_at_the_crossover PASSED    [ 88%]
+tests/test_energy.py::test_cost_grows_with_distance_and_with_bits PASSED [ 91%]
+tests/test_energy.py::test_aggregation_costs_5_nj_per_bit_per_signal PASSED [ 94%]
+tests/test_energy.py::test_probability_one_half_gives_about_two_attempts_over_10000_draws PASSED [ 97%]
+tests/test_energy.py::test_every_attempt_pays_transmit_and_receive_and_nothing_for_acknowledgements PASSED [100%]
+
+============================= 34 passed in 0.46s ==============================
