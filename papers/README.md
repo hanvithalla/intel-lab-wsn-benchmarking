@@ -12,3 +12,16 @@ File names start with the question number in `milestones/m200-reading-notes.md`.
 | Q6 | `m200-q6-behera-2022-energy-efficient-routing-protocols-electronics.pdf` | Behera et al. Energy-Efficient Routing Protocols for Wireless Sensor Networks: Architectures, Strategies, and Performance. Electronics 2022, 11(15), 2282. https://doi.org/10.3390/electronics11152282 |
 
 The Q1, Q2, Q4, Q5 and Q6 papers are open access under CC BY.
+
+# Papers read for m300 (protocol origin papers)
+
+The PDFs for these are not stored here, because most are IEEE-copyrighted. The notes in `milestones/m300-protocol-notes.md` were written from the copies below.
+
+| Q | Paper | Where it was read |
+|---|---|---|
+| Q1 | Heinzelman, Chandrakasan, Balakrishnan. Energy-efficient communication protocol for wireless microsensor networks (LEACH). HICSS 2000. https://doi.org/10.1109/HICSS.2000.926982 | Course-hosted copy: https://www.cs.montana.edu/courses/csci566/HW/HW2/LEACH.pdf |
+| Q2 | Heinzelman, Chandrakasan, Balakrishnan. An application-specific protocol architecture for wireless microsensor networks. IEEE TWC 2002. https://doi.org/10.1109/TWC.2002.804190 | Reading copy: https://ianakyildiz.com/bwn/SENSOR17/reading/routing6.pdf |
+| Q3 | Younis, Fahmy. HEED: a hybrid, energy-efficient, distributed clustering approach for ad hoc sensor networks. IEEE TMC 2004. https://doi.org/10.1109/TMC.2004.41 | Authors' copy: https://www.cs.purdue.edu/homes/fahmy/papers/tmc04.pdf |
+| Q4 | Lindsey, Raghavendra. PEGASIS: Power-efficient gathering in sensor information systems. IEEE Aerospace Conference 2002. https://doi.org/10.1109/AERO.2002.1035242 | Third-party hosted copy (the IEEE original is paywalled) |
+| Q5 | Behera et al. Residual Energy-Based Cluster-Head Selection in WSNs for IoT Application (R-LEACH). IEEE IoT Journal 2019. https://doi.org/10.1109/JIOT.2019.2897119 | arXiv: https://arxiv.org/abs/1902.01445 |
+| Q6 | El Alami, Najid. ECH: An Enhanced Clustering Hierarchy Approach to Maximize Lifetime of Wireless Sensor Networks. IEEE Access 2019. https://doi.org/10.1109/ACCESS.2019.2933052 | Open access on IEEE Xplore; PDF in this folder: `m300-q6-elalami-2019-ech-ieee-access.pdf` |
