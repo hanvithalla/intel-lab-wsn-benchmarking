@@ -14,6 +14,8 @@ its centre, and three lonely sensors 7 (30,10), 8 (10,30), 9 (30,30); sink at (2
 """
 
 import math
+import re
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -84,6 +86,18 @@ def test_a_protocol_sees_positions_and_energies_but_never_the_delivery_probabili
     assert not state.energy.flags.writeable and not state.alive.flags.writeable
     with pytest.raises(ValueError):
         state.energy[0] = 1.0
+
+
+def test_no_protocol_file_refers_to_the_links_or_the_network_object():
+    # the delivery probabilities live in Network.prob and are used only by Network.send in sim/core.py;
+    # the code of the protocol files (docstrings and comments left out) never names them
+    banned = re.compile(r"\.prob\b|prob_matrix|sink_column|rng_link|link_mode|Network|intel\.json|measured")
+    folder = Path(__file__).resolve().parents[1] / "sim" / "protocols"
+    for path in sorted(folder.glob("*.py")):
+        text = re.sub(r'"""[\s\S]*?"""', "", path.read_text(encoding="utf-8"))
+        code = "\n".join(line for line in text.splitlines() if not line.lstrip().startswith("#"))
+        found = banned.search(code)
+        assert not found, (path.name, found.group(0))
 
 
 @pytest.mark.parametrize("name", ["leach", "heed", "pegasis", "rleach", "ech"])

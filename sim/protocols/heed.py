@@ -46,7 +46,7 @@ def setup_round(state, rng):
     others = nbr & ~np.eye(m, dtype=bool)
     counts = others.sum(axis=1)
     cost = np.where(counts > 0, (dist * others).sum(axis=1) / np.maximum(counts, 1), 0.0)   # AMRP
-    prob = np.minimum(1.0, np.maximum(cfg["c_prob"] * state.energy[alive] / state.e_init, cfg["p_min"]))
+    ch_prob = np.minimum(1.0, np.maximum(cfg["c_prob"] * state.energy[alive] / state.e_init, cfg["p_min"]))
 
     in_s = np.zeros(m, dtype=bool)        # tentative or final cluster heads announced so far
     final = np.zeros(m, dtype=bool)
@@ -60,15 +60,15 @@ def setup_round(state, rng):
         cand = nbr & in_s[None, :]
         covered = cand.any(axis=1)
         best = _least_cost(cand, cost, dist)
-        at_one = prob >= 1.0
+        at_one = ch_prob >= 1.0
         i_am_best = covered & (best == me)
         uncovered = active & ~covered
         final_now = (active & i_am_best & at_one) | (uncovered & at_one)
-        tentative_now = uncovered & ~at_one & (draws <= prob)
+        tentative_now = uncovered & ~at_one & (draws <= ch_prob)
         final |= final_now
         in_s |= final_now | tentative_now
         done |= active & at_one                          # CH_previous = 1: stop after this pass
-        prob = np.minimum(prob * 2.0, 1.0)
+        ch_prob = np.minimum(ch_prob * 2.0, 1.0)
     state.stats["heed_iterations_max"] = max(state.stats["heed_iterations_max"], iterations)
 
     # phase III: join the least-cost final head in range, or become a final head
