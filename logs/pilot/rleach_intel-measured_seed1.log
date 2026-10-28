@@ -1,0 +1,15 @@
+pilot run: rleach at intel-measured, seed 1
+settings (not tuned): {'p': 0.05}
+status: completed
+stopped_round: 645 (all_dead)
+fnd: 199   hnd: 338   lnd: 645
+packets_generated: 17831   packets_delivered: 10021   pdr: 0.5620
+energy_spent_j: 26.000000   packets_per_joule: 385.4231
+energy_tx / rx / agg (j): 17.128123 / 8.732357 / 0.139520
+hop_attempts: 79872   hops_attempted: 17732   hops_delivered: 11892
+min_energy_j: 0.000e+00
+ms_per_round: 0.519 (fastest of 3 repeats; all repeats in ms per round: 0.519, 0.519, 0.522)
+protocol counters: {'heads_total': 828, 'k_opt_sum': 2655.998640761346, 'rounds_without_head': 405}
+check alive count never rises: passed
+check no energy below zero: passed
+check alive count falls over the run: passed

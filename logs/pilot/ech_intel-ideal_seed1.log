@@ -1,0 +1,15 @@
+pilot run: ech at intel-ideal, seed 1
+settings (not tuned): {'overlap_radius': 8.0}
+status: completed
+stopped_round: 1822 (all_dead)
+fnd: 1424   hnd: 1575   lnd: 1822
+packets_generated: 79901   packets_delivered: 79675   pdr: 0.9972
+energy_spent_j: 26.000000   packets_per_joule: 3064.4231
+energy_tx / rx / agg (j): 16.524136 / 8.512464 / 0.963400
+hop_attempts: 79784   hops_attempted: 79820   hops_delivered: 79768
+min_energy_j: 0.000e+00
+ms_per_round: 2.002 (fastest of 3 repeats; all repeats in ms per round: 2.048, 2.002, 2.213)
+protocol counters: {'asleep_node_rounds': 3185, 'unpaired_node_rounds': 272, 'head_removals': 2943, 'heads_total': 6034, 'reelections': 1153, 'rounds_without_head': 65}
+check alive count never rises: passed
+check no energy below zero: passed
+check alive count falls over the run: passed

@@ -1,0 +1,15 @@
+pilot run: pegasis at intel-measured, seed 1
+settings (not tuned): none
+status: completed
+stopped_round: 876 (all_dead)
+fnd: 241   hnd: 581   lnd: 876
+packets_generated: 28545   packets_delivered: 10560   pdr: 0.3699
+energy_spent_j: 26.000000   packets_per_joule: 406.1538
+energy_tx / rx / agg (j): 13.073974 / 11.886326 / 1.039700
+hop_attempts: 63941   hops_attempted: 28515   hops_delivered: 26820
+min_energy_j: 0.000e+00
+ms_per_round: 0.377 (fastest of 3 repeats; all repeats in ms per round: 0.404, 0.377, 0.397)
+protocol counters: {'chain_builds': 52}
+check alive count never rises: passed
+check no energy below zero: passed
+check alive count falls over the run: passed

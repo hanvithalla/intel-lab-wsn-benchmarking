@@ -30,3 +30,16 @@ deliverables:
     core: sim/core.py
     test: tests/test_energy.py
     log: logs/test_energy.log
+  m700-protocols:
+    protocols: sim/protocols/
+    toy: tests/test_toy.py
+    toylog: logs/test_toy.log
+    choices: docs/protocol_choices.md
+  m700-pilot:
+    script: scripts/pilot.py
+    runs: results/pilot_runs.csv
+    plots: figures/pilot_alive/
+    logs: logs/pilot/
+  m700-pilot-report:
+    report: milestones/m700-pilot-report.md
+    runs: results/pilot_runs.csv

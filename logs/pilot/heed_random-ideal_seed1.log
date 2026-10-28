@@ -1,0 +1,15 @@
+pilot run: heed at random-ideal, seed 1
+settings (not tuned): {'c_prob': 0.05}
+status: completed
+stopped_round: 1609 (all_dead)
+fnd: 841   hnd: 1212   lnd: 1609
+packets_generated: 63274   packets_delivered: 63041   pdr: 0.9963
+energy_spent_j: 26.000000   packets_per_joule: 2424.6538
+energy_tx / rx / agg (j): 13.274655 / 11.520219 / 1.205126
+hop_attempts: 63185   hops_attempted: 63227   hops_delivered: 63178
+min_energy_j: 0.000e+00
+ms_per_round: 1.698 (fastest of 3 repeats; all repeats in ms per round: 1.698, 1.825, 1.948)
+protocol counters: {'heed_iterations_max': 12, 'heads_total': 5595}
+check alive count never rises: passed
+check no energy below zero: passed
+check alive count falls over the run: passed

@@ -4,8 +4,10 @@ Wireless sensor network papers almost always compare clustering protocols on a r
 
 ## Layout
 
-- `sim/` the shared simulator core (`core.py`: energy function, link layer, round loop); protocol code is added here later
-- `tests/` unit tests, run with `python -m pytest`; the energy function is tested before any protocol exists
+- `sim/` the shared simulator core (`core.py`: energy function, link layer, round loop) and `sim/protocols/` (one file each for LEACH, HEED, PEGASIS, R-LEACH and ECH, plus `common.py`)
+- `tests/` unit tests, run with `python -m pytest`; the energy function is tested before any protocol exists, and `test_toy.py` checks each protocol on a 10-node layout by hand
+- `docs/` `protocol_choices.md`: every detail a protocol paper leaves open, the choice made and the page read
+- `scripts/` `pilot.py`, the 15-run end-to-end pilot (seed 1, five protocols, three levels)
 - `src/` reserved, currently empty
 - `setup/` Colab setup check (`check_setup.ipynb`, `setup.log`, `download_check.csv`)
 - `logs/`, `results/`, `figures/` run logs, result tables and plots

@@ -1,0 +1,16 @@
+protocol,level,seed,status,stopped_round,stop_reason,ms_per_round,fnd,hnd,lnd,packets_delivered,min_energy
+leach,random-ideal,1,completed,1529,all_dead,0.486,1024,1227,1529,64472,0.0
+heed,random-ideal,1,completed,1609,all_dead,1.698,841,1212,1609,63041,0.0
+pegasis,random-ideal,1,completed,1922,all_dead,0.227,1076,1124,1922,59726,0.0
+rleach,random-ideal,1,completed,1691,all_dead,0.385,1329,1481,1691,77155,0.0
+ech,random-ideal,1,completed,1933,all_dead,2.41,1623,1724,1933,80098,0.0
+leach,intel-ideal,1,completed,1531,all_dead,0.459,963,1229,1531,64025,0.0
+heed,intel-ideal,1,completed,1596,all_dead,1.262,735,1265,1596,63965,0.0
+pegasis,intel-ideal,1,completed,1924,all_dead,0.2,1071,1124,1924,59801,0.0
+rleach,intel-ideal,1,completed,1648,all_dead,0.381,1282,1462,1648,76050,0.0
+ech,intel-ideal,1,completed,1822,all_dead,2.002,1424,1575,1822,79675,0.0
+leach,intel-measured,1,completed,358,all_dead,0.757,180,270,358,6042,0.0
+heed,intel-measured,1,completed,362,all_dead,1.628,175,287,362,6416,0.0
+pegasis,intel-measured,1,completed,876,all_dead,0.377,241,581,876,10560,0.0
+rleach,intel-measured,1,completed,645,all_dead,0.519,199,338,645,10021,0.0
+ech,intel-measured,1,completed,640,all_dead,1.969,245,460,640,14159,0.0
