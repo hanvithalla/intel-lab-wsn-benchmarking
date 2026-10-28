@@ -10,6 +10,19 @@ radius 8 m. Every run checks that the alive count never rises and that no energy
 and times the milliseconds per round (wall clock of the whole run divided by its rounds, fastest of
 3 identical repeats).
 
+Seeds (all randomness is seeded, and the seed is recorded):
+    Every run uses SEED = 1 (below). It is passed to Network(..., seed=SEED), which builds two
+    independent numpy generators from numpy.random.SeedSequence(seed): one for link outcomes and
+    one for the protocol's random choices (sim/core.py, Network.__init__). The protocol files and
+    this script contain no other random source (tests/test_toy.py scans them for that). The seed
+    is the `seed` column of results/pilot_runs.csv and the first line of every run log.
+
+Alive-count check (answerable from text, without opening the plots):
+    After every run the script tests that the alive count never rises from one round to the next
+    (`alive`) and that it falls over the run (`falls`), and writes `check alive count never rises:
+    passed` (or failed) to the run log in logs/pilot/. The plots in figures/pilot_alive/ draw the
+    same per-round alive counts that these checks read.
+
 Run from the repository root:  python scripts/pilot.py
 """
 

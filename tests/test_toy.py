@@ -100,6 +100,29 @@ def test_no_protocol_file_refers_to_the_links_or_the_network_object():
         assert not found, (path.name, found.group(0))
 
 
+def test_the_only_random_source_is_the_one_seeded_generator_handed_to_each_protocol():
+    # protocols and the pilot script never create or call a random source of their own: the protocols
+    # draw from the `rng` they are given, which is Network.rng_protocol, built from SeedSequence(seed)
+    banned = re.compile(r"import random|from random|np\.random|numpy\.random|default_rng|RandomState|SeedSequence|time\.time|os\.urandom")
+    root = Path(__file__).resolve().parents[1]
+    for path in sorted((root / "sim" / "protocols").glob("*.py")) + [root / "scripts" / "pilot.py"]:
+        text = re.sub(r'"""[\s\S]*?"""', "", path.read_text(encoding="utf-8"))
+        code = "\n".join(line for line in text.splitlines() if not line.lstrip().startswith("#"))
+        found = banned.search(code)
+        assert not found, (path.name, found.group(0))
+    core_source = (root / "sim" / "core.py").read_text(encoding="utf-8")
+    assert core_source.count("SeedSequence(seed)") == 1 and core_source.count("default_rng(") == 2
+
+
+def test_the_same_seed_gives_the_same_pilot_style_run_for_every_protocol():
+    for name in ("leach", "heed", "pegasis", "rleach", "ech"):
+        traces = []
+        for _ in range(2):
+            net = Network(ROW_A, SINK_A, "measured", np.full((11, 11), 0.5), Params(e_init=0.01), seed=1)
+            traces.append(run_simulation(net, make(name)).rows)
+        assert traces[0] == traces[1], name
+
+
 @pytest.mark.parametrize("name", ["leach", "heed", "pegasis", "rleach", "ech"])
 def test_the_first_round_plan_does_not_depend_on_the_delivery_probabilities(name):
     plans = []
