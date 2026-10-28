@@ -25,4 +25,4 @@ deliverables:
   m500-random-layouts:
     script: data/make_layouts.py
     index: data/layouts/index.csv
-    layouts: data/layouts/
+    layouts: data/layouts/random52_seed001.json
