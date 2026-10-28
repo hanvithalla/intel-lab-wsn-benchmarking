@@ -1,5 +1,10 @@
-# datasets are never committed
-data/
+# raw downloaded datasets are never committed (data/build_deployments.py re-downloads them)
+data/raw/
+
+# files written by the m100 setup notebook (setup/check_setup.ipynb)
+data/connectivity.txt
+data/mote_locs.txt
+data/layouts/random52_s1.json
 
 # python / notebooks
 __pycache__/

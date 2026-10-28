@@ -16,3 +16,13 @@ deliverables:
     notes: milestones/m400-reading-notes.md
   m400-design-note:
     note: milestones/m400-design-note.md
+  m500-intel-deployment:
+    script: data/build_deployments.py
+    intel: data/intel.json
+    bins: results/link_by_distance.csv
+    plot: figures/intel_layout.png
+    log: logs/build_deployments.log
+  m500-random-layouts:
+    script: data/make_layouts.py
+    index: data/layouts/index.csv
+    layouts: data/layouts/

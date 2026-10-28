@@ -8,8 +8,11 @@ Wireless sensor network papers almost always compare clustering protocols on a r
 - `setup/` Colab setup check (`check_setup.ipynb`, `setup.log`, `download_check.csv`)
 - `logs/`, `results/`, `figures/` run logs, result tables and plots
 - `milestones/` written deliverables
-- `data/` downloaded datasets, git-ignored and never committed
+- `data/` the deployment scripts and the files they generate; only `data/raw/` (the downloads) is git-ignored
 
 ## Data
 
-The Intel Berkeley Research Lab `connectivity.txt` and `mote_locs.txt` come from https://db.csail.mit.edu/labdata/labdata.html. The data may be used in any venue with acknowledgement of Bodik, Hong, Guestrin, Madden, Paskin and Thibaux.
+The Intel Berkeley Research Lab `connectivity.txt` and `mote_locs.txt` come from https://db.csail.mit.edu/labdata/labdata.html. The data may be used in any venue with acknowledgement of Bodik, Hong, Guestrin, Madden, Paskin and Thibaux. The raw downloads go in `data/raw/` and are not committed.
+
+- `python data/build_deployments.py` parses the Intel files and writes `data/intel.json` (52 sensors, the sink, the delivery-probability matrix), `results/link_by_distance.csv`, `figures/intel_layout.png` and `logs/build_deployments.log`.
+- `python data/make_layouts.py` writes the 83 random layouts in `data/layouts/` and `data/layouts/index.csv`.

@@ -1,0 +1,4 @@
+layouts written: 83
+random52: 43 layouts, 52 sensors each, sink (19.5, 19.0), box x 0.5-40.5, y 1.0-31.0, seeds 1-103 (43 seeds)
+canonical100: 40 layouts, 100 sensors each, sink (50.0, 50.0), box x 0.0-100.0, y 0.0-100.0, seeds 1-40 (40 seeds)
+evaluation seeds: 1-40; tuning seeds: [101, 102, 103]

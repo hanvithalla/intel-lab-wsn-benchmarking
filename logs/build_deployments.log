@@ -1,0 +1,27 @@
+build_deployments.py: Intel Berkeley Research Lab
+source: https://db.csail.mit.edu/labdata/labdata.html
+acknowledgement: Bodik, Hong, Guestrin, Madden, Paskin and Thibaux
+connectivity.txt: 82677 bytes
+mote_locs.txt: 552 bytes
+motes with coordinates: 54 (ids 1-54)
+skipped line 2918 of connectivity.txt: ' 0 31 ' (no probability)
+dropped 54 rows that mention id 0 (no coordinates)
+ignored 1 blank line(s)
+mote pairs: 2916
+max probability: 0.83
+off-diagonal pairs: 2862, with probability 0: 457, above 0.5: 187, above 0.9: 0
+mote 5: non-zero outgoing links = 0 -> dropped at every level
+sink: 3
+sink coordinates: (19.5, 19.0)
+incoming links >= 0.1: 34
+tie at 34 incoming links between motes [3, 35, 37]; lowest id chosen
+sensors: 52 (all 54 motes minus mote 5 and the sink, mote 3)
+distance to sink: min 4.5 m, max 26.2 m
+sink column (sensor -> sink): mean 0.202; sensors with probability 0 to the sink: [15]
+asymmetry: mean |p(a->b) - p(b->a)| over sensor pairs = 0.054
+wrote data\intel.json
+wrote results\link_by_distance.csv (directed pairs of the 54 located motes, longest distance 47.2 m)
+mean probability under 5 m: 0.52; between 20 and 50 m: 0.04
+for the 53 motes of the deployment (52 sensors and the sink): under 5 m 0.54, 20-50 m 0.04
+links above 0.5: 187 directed pairs, 125 drawn (a line is drawn if either direction is above 0.5)
+wrote figures\intel_layout.png
